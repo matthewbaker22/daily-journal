@@ -5,11 +5,14 @@
 h1 {
     display: flex;
     justify-content: center;
-    font-weight: 550px;
+    color: #e8a87c;
 }
 
 body {
-    background: #7dc2ad;
+    /* background: #7dc2ad; */
+    background-image: url("../sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 label {
@@ -22,37 +25,45 @@ label {
 
 button {
     border-radius: 15px;
-    border: 1px solid black;
+    border: 2px solid black;
     height: 25px;
     width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 10px;
+    margin: 30px 30% 0 30%;
     font-size: medium;
     font-weight: bold;
+}
+
+button:hover {
+    background: skyblue;
 }
 
 fieldset {
     background: #e8a87c;
     border: 1px solid #04396b;
     padding: 30px 100px 30px 100px;
+    box-shadow: 0 3px 20px 0 #d2908b, 0 8px 22px 0 black;
 }
 
 input {
     position: relative;
-    left: 44.75%;
+    left: 38%;
 }
 
 textarea {
     position: relative;
-    left: 42%;
+    left: 30%;
 }
 
 select {
     position: relative;
-    left: 48%;
+    left: 44%;
 }
 
-.class {
-    
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 50%;
 }
