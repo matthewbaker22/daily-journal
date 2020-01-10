@@ -2,14 +2,57 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 550px;
+}
+
+body {
+    background: #7dc2ad;
+}
+
 label {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    color: black;
+    font-size: large;
+    font-weight: bold;
 }
 
 button {
-    border-radius: 0px;
+    border-radius: 15px;
+    border: 1px solid black;
     height: 25px;
-    width: 120px;
-    margin-left: 2px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+fieldset {
+    background: #e8a87c;
+    border: 1px solid #04396b;
+    padding: 30px 100px 30px 100px;
+}
+
+input {
+    position: relative;
+    left: 44.75%;
+}
+
+textarea {
+    position: relative;
+    left: 42%;
+}
+
+select {
+    position: relative;
+    left: 48%;
+}
+
+.class {
+    
 }
