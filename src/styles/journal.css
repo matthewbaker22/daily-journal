@@ -2,14 +2,77 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #e8a87c;
+}
+
+body {
+    /* background: #7dc2ad; */
+    background-image: url("../sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 label {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    color: black;
+    font-size: large;
+    font-weight: bold;
 }
 
 button {
-    border-radius: 0px;
+    border-radius: 15px;
+    border: 2px solid black;
     height: 25px;
-    width: 120px;
-    margin-left: 2px;
+    width: 40%;
+    margin: 30px 30% 0 30%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+button:hover {
+    background: skyblue;
+}
+
+fieldset {
+    background: #e8a87c;
+    border: 1px solid #04396b;
+    padding: 30px 100px 30px 100px;
+    box-shadow: 0 3px 20px 0 #d2908b, 0 8px 22px 0 black;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+select {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 80%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
