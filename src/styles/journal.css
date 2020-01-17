@@ -45,18 +45,21 @@ fieldset {
 }
 
 input {
-    position: relative;
-    left: 38%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 textarea {
-    position: relative;
-    left: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 select {
-    position: relative;
-    left: 44%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .center-form {
@@ -65,5 +68,11 @@ select {
 }
 
 form {
-    width: 50%;
+    width: 80%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
