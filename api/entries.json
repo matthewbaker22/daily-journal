@@ -1,0 +1,25 @@
+{
+    "journalEntries": [
+        {
+            "id": 1,
+            "journalDate": "2020-01-10",
+            "conceptsCovered": "Functions and objects in JavaScript",
+            "journalEntry": "I don't know what going on.",
+            "mood": "Sleepy"
+        },
+        {
+            "id": 2,
+            "journalDate": "2020-01-10",
+            "conceptsCovered": "Simple javascript functions",
+            "journalEntry": "Still barely know whats going on",
+            "mood": "Happy"
+        },
+        {
+            "id": 3,
+            "journalDate": "2020-01-10",
+            "conceptsCovered": "Hopefully nothing, ill be out of NSS",
+            "journalEntry": "Tomorrow is christmas-",
+            "mood": "Sleepy"
+        }
+    ]
+}

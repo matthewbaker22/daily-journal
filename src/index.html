@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="styles/journal.css">
 </head>
 <body>
-    <h1>Daily Journal</h1>
+    <h1 id="title">Daily Journal</h1>
 
-    <div class="center-form">
+    <div class="border">
         <form action="">
-            <fieldset>      
+            <fieldset class="center">      
                 <label for="journalDate">Date of entry</label>
-                <input type="date" name="journalDate" id="journalDate">
+                <input type="date" name="journalDate">
             </fieldset>
             <fieldset>
                 <label for="conceptsCovered">Concepts covered</label>
                 <input type="text" name="conceptsCovered" id="conceptsCovered">
             </fieldset>
-            <fieldset class="center">
+            <fieldset>
                 <label for="journalEntry">Journal Entry</label>
-                <textarea name="journalEntry" id="journalEntry" cols="30" rows="2"></textarea>
+                <textarea name="journalEntry" id="journalEntry" cols="30" rows="3"></textarea>
             </fieldset>
             <fieldset>
                 <label for="mood">Mood for the day</label>
@@ -33,12 +33,13 @@
                     <option value="sleepy">Sleepy</option>
                 </select>
             </fieldset>
-            <button>Record Journal Entry</button>
+        </div>
+            <button><strong>Record Journal Entry</strong></button>
         </form>
-        <article id="entryLog">
+        <article id="journal-container">
 
         </article>
-    </div>
+    
     <script src="scripts/journal.js"></script>
 </body>
 </html>
