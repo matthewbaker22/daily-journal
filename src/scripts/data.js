@@ -17,6 +17,10 @@ const API = {
     }
 }
 
+const saveJournalEntry = (entry) => {
+    
+}
+
 export default API
 
 
