@@ -20,6 +20,15 @@ fieldset {
     border: 1px solid#E8A87C;
 }
 
+.radioButtons span {
+    margin: 0 45px 0 45px;
+}
+
+.radioButtons input {
+    display: inline;
+    margin: 25px  10px ;
+}
+
 label {
     display: block;
     text-align: center;

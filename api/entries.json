@@ -5,42 +5,42 @@
       "journalDate": "2020-01-10",
       "conceptsCovered": "Functions and objects in JavaScript",
       "journalEntry": "I don't know what going on.",
-      "mood": "Sleepy"
+      "mood": "sleepy"
     },
     {
       "id": 2,
       "journalDate": "2020-01-10",
       "conceptsCovered": "Simple javascript functions",
       "journalEntry": "Still barely know whats going on",
-      "mood": "Happy"
+      "mood": "happy"
     },
     {
       "id": 3,
       "journalDate": "2020-12-24",
       "conceptsCovered": "Hopefully nothing, ill be out of NSS",
       "journalEntry": "Tomorrow is christmas-",
-      "mood": "Sleepy"
+      "mood": "sleepy"
     },
     {
       "id": 4,
       "journalDate": "2020-01-10",
       "conceptsCovered": "Functions and objects in JavaScript",
       "journalEntry": "I don't know what going on.",
-      "mood": "Sleepy"
+      "mood": "sleepy"
     },
     {
       "id": 5,
       "journalDate": "2020-01-10",
       "conceptsCovered": "Simple javascript functions",
       "journalEntry": "Still barely know whats going on",
-      "mood": "Happy"
+      "mood": "sappy"
     },
     {
       "id": 6,
       "journalDate": "2020-12-24",
       "conceptsCovered": "Hopefully nothing, ill be out of NSS",
       "journalEntry": "Tomorrow is christmas-",
-      "mood": "Sleepy"
+      "mood": "sleepy"
     },
     {
       "journalDate": "2020-02-06",
@@ -48,6 +48,27 @@
       "journalEntry": "testing 2",
       "mood": "sad",
       "id": 7
+    },
+    {
+      "journalDate": "2020-02-12",
+      "conceptsCovered": "test",
+      "journalEntry": "testing",
+      "mood": "happy",
+      "id": 8
+    },
+    {
+      "journalDate": "2020-02-11",
+      "conceptsCovered": "aaa",
+      "journalEntry": "aaa",
+      "mood": "happy",
+      "id": 9
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "journalEntry": "",
+      "mood": "happy",
+      "id": 10
     }
   ]
 }

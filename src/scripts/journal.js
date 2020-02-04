@@ -9,6 +9,18 @@ const conceptsCovered = document.getElementById("conceptsCovered")
 const journalEntry = document.getElementById("journalEntry")
 const mood = document.getElementById("mood")
 
+const moodRadioButtons = document.getElementsByName("filterMood")
+
+moodRadioButtons.forEach(button => button.addEventListener("click", function () {
+    const selectedMood = event.target.value
+
+    API.getJournalEntries()
+        .then(entriesArray => {
+            const filteredEntries = entriesArray.filter(entry => entry.mood === selectedMood)
+            renderJournalEntries(filteredEntries)
+        }) 
+}))
+
 const journalEntryMaker = (date, concepts, entry, mood) => {
     return {
         "journalDate": date,
@@ -17,7 +29,6 @@ const journalEntryMaker = (date, concepts, entry, mood) => {
         "mood": mood
     }
 }
-
 
 submitButton.addEventListener('click', event => {
     const newJournalEntry = journalEntryMaker(journalDate.value, conceptsCovered.value, journalEntry.value, mood.value)
