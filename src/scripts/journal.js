@@ -30,6 +30,33 @@ const journalEntryMaker = (date, concepts, entry, mood) => {
     }
 }
 
+const journalList = document.querySelector("#journal-container")
+
+const entryDeleteEventListener = () => {
+    journalList.addEventListener("click", (event) => {
+        if(event.target.id.startsWith("deleteEntry--")) {
+            const deleteBtnId = event.target.id;
+            const deleteBtnArray = deleteBtnId.split("--");
+            console.log(deleteBtnArray)
+            const entryIdToDelete = deleteBtnArray[1];
+            console.log(entryIdToDelete);
+
+
+            API.deleteEntry(entryIdToDelete)
+                .then(API.getJournalEntries)
+                .then(renderJournalEntries)
+        }
+    })
+}
+
+entryDeleteEventListener();
+
+
+
+
+
+
+
 submitButton.addEventListener('click', event => {
     const newJournalEntry = journalEntryMaker(journalDate.value, conceptsCovered.value, journalEntry.value, mood.value)
 
