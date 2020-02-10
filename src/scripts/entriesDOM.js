@@ -1,8 +1,11 @@
-import journalFactory from './entryComponent.js'
+import journalFactory from './entryCardFactory.js'
+
+const container = document.querySelector("#journal-container")
 
 const renderJournalEntries = (journals) => {
-    const container = document.querySelector("#journal-container")
+    
     container.innerHTML = ""
+    
     journals.forEach(journal => {
         const journalHTML = journalFactory(journal)
         container.innerHTML += journalHTML
@@ -11,3 +14,6 @@ const renderJournalEntries = (journals) => {
 
 export default renderJournalEntries
 
+/* Alt for statement:
+    for (const journal of journals) {}
+*/

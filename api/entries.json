@@ -1,11 +1,18 @@
 {
   "entries": [
     {
-      "journalDate": "2020-02-05",
-      "conceptsCovered": "Deleting items from dom",
-      "journalEntry": "Created a delete button that when clicked, removes the journal entry from the DOM and the JSON server",
+      "journalDate": "2020-02-11",
+      "conceptsCovered": "test",
+      "journalEntry": "test",
       "mood": "happy",
       "id": 1
+    },
+    {
+      "journalDate": "2020-02-20",
+      "conceptsCovered": "awfaw",
+      "journalEntry": "sFQEWQ",
+      "mood": "happy",
+      "id": 2
     }
   ]
 }
