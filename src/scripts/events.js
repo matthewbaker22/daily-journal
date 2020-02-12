@@ -39,5 +39,31 @@ export default {
                 updateFormFields(entryIdToEdit)
             }
         })
+    },
+    searchEntries: () => {
+        const searchEntry = document.getElementById("searchEntry")
+    
+        searchEntry.addEventListener("keyup", event => {
+            if (event.keyCode === 13) {
+                const searchTerm = event.target.value
+    
+                apiActions.getJournalEntries().then(arr => {
+                    renderJournalEntries(arr.filter(entry => {
+                        const values = Object.values(entry)
+                        for (const value of values) {
+                            if (typeof value === "string") {
+                                if (value.includes(searchTerm)) {
+                                    return entry
+                                }
+                            }
+                        }
+                    }))
+                })
+            }
+        })
     }
 }
+
+
+
+

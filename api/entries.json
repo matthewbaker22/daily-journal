@@ -1,18 +1,3 @@
 {
-  "entries": [
-    {
-      "journalDate": "2020-02-11",
-      "conceptsCovered": "test",
-      "journalEntry": "test",
-      "mood": "happy",
-      "id": 1
-    },
-    {
-      "journalDate": "2020-02-20",
-      "conceptsCovered": "awfaw",
-      "journalEntry": "sFQEWQ",
-      "mood": "happy",
-      "id": 2
-    }
-  ]
+  "entries": []
 }

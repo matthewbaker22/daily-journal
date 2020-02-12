@@ -1,9 +1,8 @@
-* {
+/* * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    /* background: #7dc2ad; */
     background-image: url("../sky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,4 +80,5 @@ button:hover {
     margin-left: 1em;
 }
 
+ */
 
