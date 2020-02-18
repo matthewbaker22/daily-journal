@@ -1,49 +1,54 @@
-const journalEntry1 = {
-    journalDate: "2020-01-10",
-    conceptsCovered: "Functions and objects in JavaScript",
-    journalEntry: "I don't know what going on.",
-    mood: "Sleepy"
-}
-const journalEntry2 = {
-    journalDate: "2020-01-10",
-    conceptsCovered: "Simple javascript functions",
-    journalEntry: "Still barely know whats going on",
-    mood: "Happy"
-}
-const journalEntry3 = {
-    journalDate: "2020-01-10",
-    conceptsCovered: "Hopefully nothing, ill be out of NSS",
-    journalEntry: "Tomorrow is christmas-",
-    mood: "Sleepy"
+import apiActions from "./api.js"
+import renderJournalEntries from "./entriesDOM.js"
+
+const clearForm = () => {
+    const hiddenEntryId = document.querySelector("#entryId")
+    const journalDateInput = document.querySelector("#journalDate")
+    const conceptsCoveredInput = document.querySelector("#conceptsCovered")
+    const journalEntryInput = document.querySelector("#journalEntry")
+    const moodInput = document.querySelector("#mood")
+
+    hiddenEntryId.value = ""
+    journalDateInput.value = ""
+    conceptsCoveredInput.value = ""
+    journalEntryInput.value = ""
+    moodInput.value = ""
 }
 
-let journalArray = [];
+const addJournalEventListener = () => {
+    const saveButton = document.querySelector("#submit-button")
 
-function newJournalEntry (journalEntry) {
-    journalArray.push(journalEntry);
+    saveButton.addEventListener("click", () => {
+        const hiddenEntryId = document.querySelector("#entryId")
+        const journalDateInput = document.querySelector("#journalDate")
+        const conceptsCoveredInput = document.querySelector("#conceptsCovered")
+        const journalEntryInput = document.querySelector("#journalEntry")
+        const moodInput = document.querySelector("#mood")
+        
+        const entry = {
+            journalDate: journalDateInput.value,
+            conceptsCovered: conceptsCoveredInput.value,
+            journalEntry: journalEntryInput.value,
+            mood: moodInput.value
+        }
+
+        if (hiddenEntryId.value !== "") {
+            entry.id = parseInt(hiddenEntryId.value)
+            apiActions.updateEntry(entry)
+                .then(() => {
+                    apiActions.getJournalEntries()
+                        .then(renderJournalEntries)
+                        .then(clearForm)
+                })
+        } else {
+            apiActions.addEntry(entry)
+                .then(() => {
+                    apiActions.getJournalEntries()
+                    .then(renderJournalEntries)
+                    .then(clearForm)
+                })
+        }
+    })
 }
 
-newJournalEntry(journalEntry1);
-newJournalEntry(journalEntry2);
-newJournalEntry(journalEntry3);
-
-const makeJournalEntryComponent = (journalEntry) => {
-    return `
-        <div class="journal">
-            <h1>${journalEntry.conceptsCovered}</h1>
-            <h3>${journalEntry.journalEntry}</h3>
-            <h2>${journalEntry.journalDate}</h2>
-            <h3>${journalEntry.mood}</h3>
-        </div>
-    `
-}
-
-const entryLog = document.getElementById("entryLog");
-
-const renderJournalEntries = (journalArray) => {
-    for (let i = 0; i < journalArray.length; i++) {
-        entryLog.innerHTML += makeJournalEntryComponent(journalArray[i]);
-    }
-}
-
-renderJournalEntries(journalArray);
+export default addJournalEventListener
